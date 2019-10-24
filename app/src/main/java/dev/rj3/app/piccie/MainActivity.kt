@@ -2,7 +2,6 @@ package dev.rj3.app.piccie
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.bumptech.glide.Glide
 import dev.rj3.app.piccie.retrofit.UnsplashApi
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.Dispatchers
@@ -24,7 +23,7 @@ class MainActivity : AppCompatActivity() {
 
             val response = unsplash.getPhotos()
 
-            Glide.with(this@MainActivity)
+            GlideApp.with(this@MainActivity)
                 .load(response[(Math.random() * response.size).toInt()].urls.small).into(imageView)
 
 
