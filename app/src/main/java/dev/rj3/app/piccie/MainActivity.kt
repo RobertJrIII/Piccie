@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import dev.rj3.app.piccie.retrofit.UnsplashApi
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.toolbar.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -18,7 +19,7 @@ class MainActivity : AppCompatActivity() {
 
         val unsplash = UnsplashApi()
 
-
+        setSupportActionBar(toolbar)
         GlobalScope.launch(Dispatchers.Main) {
 
             val response = unsplash.getPhotos()
