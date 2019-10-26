@@ -2,6 +2,8 @@ package dev.rj3.app.piccie
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.navigation.findNavController
+import androidx.navigation.ui.setupWithNavController
 import dev.rj3.app.piccie.retrofit.UnsplashApi
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.toolbar.*
@@ -17,18 +19,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-        val unsplash = UnsplashApi()
+        navBar.setupWithNavController(findNavController(R.id.nav_host_fragment))
 
         setSupportActionBar(toolbar)
-        GlobalScope.launch(Dispatchers.Main) {
 
-            val response = unsplash.getPhotos()
-
-            GlideApp.with(this@MainActivity)
-                .load(response[(Math.random() * response.size).toInt()].urls.small).into(imageView)
-
-
-        }
 
 
     }

@@ -9,12 +9,13 @@ import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Headers
+import retrofit2.http.Query
 
 interface UnsplashApi {
 
     @Headers("Accept-Version: v1")
     @GET("photos")
-    suspend fun getPhotos(): List<UnsplashImage>
+    suspend fun getPhotos(@Query("page") pageNum: Int): List<UnsplashImage>
 
 
     companion object {

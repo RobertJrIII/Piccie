@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/navigation"
+    app:startDestination="@id/newImagesFragment">
+
+    <fragment
+        android:id="@+id/newImagesFragment"
+        android:name="dev.rj3.app.piccie.fragments.NewImagesFragment"
+        android:label="NewImagesFragment" />
+    <fragment
+        android:id="@+id/featuredFragment"
+        android:name="dev.rj3.app.piccie.fragments.FeaturedFragment"
+        android:label="FeaturedFragment" />
+    <fragment
+        android:id="@+id/collectionsFragment"
+        android:name="dev.rj3.app.piccie.fragments.CollectionsFragment"
+        android:label="CollectionsFragment" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="dev.rj3.app.piccie.fragments.SettingsFragment"
+        android:label="SettingsFragment" />
+</navigation>

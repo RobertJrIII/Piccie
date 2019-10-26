@@ -10,17 +10,23 @@
     >
 
     <include
+        layout="@layout/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        layout="@layout/toolbar" />
+        />
 
-    <ImageView
-        android:id="@+id/imageView"
+    <fragment
+
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:contentDescription="@string/Content_Description"
-        android:textAlignment="center" />
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/navigation"
+        tools:layout="@layout/new_images_fragment"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/navBar"
