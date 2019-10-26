@@ -4,28 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
+
     tools:context=".MainActivity"
 
     >
 
     <include
+        android:id="@+id/bar"
         layout="@layout/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        />
+       />
 
     <fragment
 
         android:id="@+id/nav_host_fragment"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_above="@id/navBar"
         app:defaultNavHost="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
         app:navGraph="@navigation/navigation"
         tools:layout="@layout/new_images_fragment"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        />
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -33,6 +37,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
         android:background="?android:attr/windowBackground"
         app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
         app:menu="@menu/navbar_menu_items" />
