@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import dev.rj3.app.piccie.GlideApp
 import dev.rj3.app.piccie.R
 import dev.rj3.app.piccie.adapter.NewImagesAdapter
+import dev.rj3.app.piccie.models.UnsplashImage
 import dev.rj3.app.piccie.retrofit.UnsplashApi
 import kotlinx.android.synthetic.main.new_images_fragment.*
 import kotlinx.coroutines.Dispatchers
@@ -45,10 +46,11 @@ class NewImagesFragment : Fragment() {
         val unsplash = UnsplashApi()
         GlobalScope.launch(Dispatchers.Main) {
 
-            val response = unsplash.getPhotos(1)
+            val response: List<UnsplashImage> = unsplash.getPhotos(1)
             Timber.d(response[0].user.name)
-            val adapter = NewImagesAdapter(context, response)
+            val adapter = NewImagesAdapter(response)
             recyclerview.adapter = adapter
+
 
         }
     }

@@ -5,6 +5,8 @@
     <string name="Collections">Collections</string>
     <string name="Settings">Settings</string>
     <string name="Content_Description">An Image from Unsplash</string>
+    <string name="unsplash_image">Unsplash Image</string>
+    <string name="author">Author</string>
 
 
 </resources>
