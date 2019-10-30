@@ -5,18 +5,18 @@
 
     <fragment
         android:id="@+id/newImagesFragment"
-        android:name="dev.rj3.app.piccie.fragments.NewImagesFragment"
+        android:name="dev.rj3.app.piccie.ui.fragments.NewImagesFragment"
         android:label="NewImagesFragment" />
     <fragment
         android:id="@+id/featuredFragment"
-        android:name="dev.rj3.app.piccie.fragments.FeaturedFragment"
+        android:name="dev.rj3.app.piccie.ui.fragments.FeaturedFragment"
         android:label="FeaturedFragment" />
     <fragment
         android:id="@+id/collectionsFragment"
-        android:name="dev.rj3.app.piccie.fragments.CollectionsFragment"
+        android:name="dev.rj3.app.piccie.ui.fragments.CollectionsFragment"
         android:label="CollectionsFragment" />
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="dev.rj3.app.piccie.fragments.SettingsFragment"
+        android:name="dev.rj3.app.piccie.ui.fragments.SettingsFragment"
         android:label="SettingsFragment" />
 </navigation>

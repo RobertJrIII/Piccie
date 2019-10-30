@@ -1,7 +1,7 @@
 package dev.rj3.app.piccie.retrofit
 
 import dev.rj3.app.piccie.Client_ID
-import dev.rj3.app.piccie.models.UnsplashImage
+import dev.rj3.app.piccie.models.newUnsplahImages.UnsplashImage
 
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient.*

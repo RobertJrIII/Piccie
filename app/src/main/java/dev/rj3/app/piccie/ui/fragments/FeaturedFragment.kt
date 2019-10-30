@@ -1,4 +1,4 @@
-package dev.rj3.app.piccie.fragments
+package dev.rj3.app.piccie.ui.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater

@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import dev.rj3.app.piccie.GlideApp
 import dev.rj3.app.piccie.R
 import dev.rj3.app.piccie.adapter.NewImagesAdapter.ViewHolder
-import dev.rj3.app.piccie.models.UnsplashImage
+import dev.rj3.app.piccie.models.newUnsplahImages.UnsplashImage
 
 class NewImagesAdapter(private val imageList: List<UnsplashImage>) :
     RecyclerView.Adapter<ViewHolder>() {

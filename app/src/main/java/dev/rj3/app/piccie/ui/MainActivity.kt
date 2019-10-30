@@ -1,15 +1,12 @@
-package dev.rj3.app.piccie
+package dev.rj3.app.piccie.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
-import dev.rj3.app.piccie.retrofit.UnsplashApi
+import dev.rj3.app.piccie.R
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.toolbar.*
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
 
 
 class MainActivity : AppCompatActivity() {

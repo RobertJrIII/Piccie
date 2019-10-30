@@ -1,6 +1,5 @@
-package dev.rj3.app.piccie.fragments
+package dev.rj3.app.piccie.ui.fragments
 
-import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -16,7 +15,6 @@ import dev.rj3.app.piccie.retrofit.UnsplashApi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
-import android.net.ConnectivityManager as ConnectivityManager
 
 
 class NewImagesFragment : Fragment() {
