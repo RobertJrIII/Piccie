@@ -13,7 +13,7 @@
             android:id="@+id/unsplashImage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
+            android:adjustViewBounds="true"
             android:contentDescription="@string/unsplash_image"
 
 

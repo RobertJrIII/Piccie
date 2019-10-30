@@ -1,5 +1,6 @@
 package dev.rj3.app.piccie.fragments
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -7,16 +8,16 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import dev.rj3.app.piccie.GlideApp
+
 import dev.rj3.app.piccie.R
 import dev.rj3.app.piccie.adapter.NewImagesAdapter
-import dev.rj3.app.piccie.models.UnsplashImage
+
 import dev.rj3.app.piccie.retrofit.UnsplashApi
-import kotlinx.android.synthetic.main.new_images_fragment.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
-import timber.log.Timber
+import android.net.ConnectivityManager as ConnectivityManager
+
 
 class NewImagesFragment : Fragment() {
 
@@ -46,8 +47,8 @@ class NewImagesFragment : Fragment() {
         val unsplash = UnsplashApi()
         GlobalScope.launch(Dispatchers.Main) {
 
-            val response: List<UnsplashImage> = unsplash.getPhotos(1)
-            Timber.d(response[0].user.name)
+            val response = unsplash.getPhotos(1)
+
             val adapter = NewImagesAdapter(response)
             recyclerview.adapter = adapter
 
