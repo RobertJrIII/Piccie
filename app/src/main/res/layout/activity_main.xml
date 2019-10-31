@@ -4,41 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-    tools:context=".ui.MainActivity"
-
-    >
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".ui.MainActivity">
 
     <include
-        android:id="@+id/bar"
-        layout="@layout/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-       />
+        layout="@layout/toolbar" />
 
     <fragment
-
         android:id="@+id/nav_host_fragment"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/toolbar"
-        android:layout_above="@id/navBar"
+
+        android:layout_gravity="center"
         app:defaultNavHost="true"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         app:navGraph="@navigation/navigation"
-        tools:layout="@layout/new_images_fragment"
-
-        />
+        tools:layout="@layout/new_images_fragment" />
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/navBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
         android:layout_gravity="bottom"
-        android:layout_marginStart="0dp"
-        android:layout_marginEnd="0dp"
+
         android:background="?android:attr/windowBackground"
         app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
         app:menu="@menu/navbar_menu_items" />

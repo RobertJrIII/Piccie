@@ -2,6 +2,7 @@ package dev.rj3.app.piccie.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import dev.rj3.app.piccie.R
@@ -15,11 +16,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
-        navBar.setupWithNavController(findNavController(R.id.nav_host_fragment))
+        val navController: NavController = findNavController(R.id.nav_host_fragment)
+        navBar.setupWithNavController(navController)
 
         setSupportActionBar(toolbar)
-
 
 
     }

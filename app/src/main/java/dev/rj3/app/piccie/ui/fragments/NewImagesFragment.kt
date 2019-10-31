@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import dev.rj3.app.piccie.R
 import dev.rj3.app.piccie.adapter.NewImagesAdapter
 
-import dev.rj3.app.piccie.retrofit.UnsplashApi
+import dev.rj3.app.piccie.data.api.UnsplashApi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -33,6 +33,7 @@ class NewImagesFragment : Fragment() {
             val layoutManager = LinearLayoutManager(context)
             setLayoutManager(layoutManager)
             setHasFixedSize(true)
+
         }
 
 
@@ -45,12 +46,14 @@ class NewImagesFragment : Fragment() {
         val unsplash = UnsplashApi()
         GlobalScope.launch(Dispatchers.Main) {
 
-            val response = unsplash.getPhotos(1)
+            val response = unsplash.getPhotos(1, 15)
 
             val adapter = NewImagesAdapter(response)
             recyclerview.adapter = adapter
 
 
         }
+
+
     }
 }

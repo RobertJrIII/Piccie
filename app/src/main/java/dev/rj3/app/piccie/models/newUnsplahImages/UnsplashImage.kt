@@ -1,24 +1,39 @@
 package dev.rj3.app.piccie.models.newUnsplahImages
 
 
-import androidx.room.Embedded
-import androidx.room.Entity
-import androidx.room.Ignore
-import androidx.room.PrimaryKey
 import com.squareup.moshi.Json
 
-@Entity(tableName = "Images")
 data class UnsplashImage(
-    @PrimaryKey val id: String,
+    val id: String,
     val color: String,
     val description: String?,
     @Json(name = "alt_description") val altDescription: String?,
-    @Embedded(prefix = "urls_") val urls: Urls,
-    @Ignore @Json(name = "links") val link: Link,
+    val urls: Urls,
+    @Json(name = "links") val link: Link,
     var likes: Int,
-    @Embedded(prefix = "user_") val user: User
+    val user: User
 )
 
+
+
+data class Urls(
+    val raw: String,
+    val full: String,
+    val regular: String,
+    val small: String,
+    @Json(name = "thumb") val thumbnail: String
+)
+
+data class Link(@Json(name = "download_location") val download: String)
+
+
+data class User(
+    val id: String,
+    val username: String,
+    val name: String,
+    @Json(name = "total_photos") val totalPhotos: Int
+
+)
 
 
 
