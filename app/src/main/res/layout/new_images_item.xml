@@ -4,29 +4,29 @@
     android:layout_height="wrap_content">
 
 
+
+
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
+        android:layout_height="match_parent">
         <ImageView
             android:id="@+id/unsplashImage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
+
             android:adjustViewBounds="true"
             android:contentDescription="@string/unsplash_image"
-
+            android:transitionName="imageCover"
+            android:scaleType="fitXY"
 
             />
 
-        <TextView
+        <androidx.emoji.widget.EmojiTextView
             android:id="@+id/imageAuthor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/noto_color_emoji_compat"
             android:text="@string/author"
-
             android:textSize="18sp" />
 
     </RelativeLayout>
