@@ -1,6 +1,6 @@
 package dev.rj3.app.piccie.data.api
 
-import dev.rj3.app.piccie.Client_ID
+import dev.rj3.app.piccie.BuildConfig
 import dev.rj3.app.piccie.models.newUnsplahImages.UnsplashImage
 
 import okhttp3.Interceptor
@@ -11,7 +11,6 @@ import retrofit2.http.GET
 import retrofit2.http.Headers
 import retrofit2.http.Path
 import retrofit2.http.Query
-
 
 
 interface UnsplashApi {
@@ -31,7 +30,6 @@ interface UnsplashApi {
     companion object {
 
         operator fun invoke(): UnsplashApi {
-
             val okhttpBuilder = Builder()
 
             okhttpBuilder.addInterceptor(object : Interceptor {
@@ -40,7 +38,7 @@ interface UnsplashApi {
 
                     val newRequest = request.newBuilder().header(
                         "Authorization",
-                        "Client-ID $Client_ID"
+                        "Client-ID ${BuildConfig.Client_ID}"
                     )
                     return chain.proceed(newRequest.build())
 
