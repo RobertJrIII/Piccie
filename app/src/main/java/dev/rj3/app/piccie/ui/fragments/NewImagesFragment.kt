@@ -18,6 +18,7 @@ import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.Dispatchers.Main
 
 const val PER_PAGE: Int = 25
+
 class NewImagesFragment : Fragment() {
 
     private lateinit var recyclerview: RecyclerView

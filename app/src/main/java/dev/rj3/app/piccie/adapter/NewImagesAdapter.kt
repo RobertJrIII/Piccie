@@ -6,7 +6,9 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import dev.rj3.app.piccie.GlideApp
+import coil.ImageLoader
+import coil.api.load
+import coil.request.LoadRequest
 import dev.rj3.app.piccie.R
 import dev.rj3.app.piccie.adapter.NewImagesAdapter.ViewHolder
 import dev.rj3.app.piccie.models.newUnsplahImages.UnsplashImage
@@ -27,8 +29,7 @@ class NewImagesAdapter(private val imageList: List<UnsplashImage>) :
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val currentImage = imageList[position]
         holder.author.text = currentImage.user.name
-
-        GlideApp.with(holder.itemView.context).load(currentImage.urls.small).into(holder.image)
+        holder.image.load(currentImage.urls.small)
 
     }
 

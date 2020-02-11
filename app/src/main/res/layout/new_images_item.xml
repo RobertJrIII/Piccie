@@ -16,8 +16,7 @@
 
             android:adjustViewBounds="true"
             android:contentDescription="@string/unsplash_image"
-            android:transitionName="imageCover"
-            android:scaleType="fitXY"
+
 
             />
 
