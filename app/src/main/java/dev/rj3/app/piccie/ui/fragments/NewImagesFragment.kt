@@ -7,9 +7,12 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.xwray.groupie.GroupAdapter
+import com.xwray.groupie.kotlinandroidextensions.GroupieViewHolder
 
 
 import dev.rj3.app.piccie.R
+import dev.rj3.app.piccie.adapter.ImageItem
 import dev.rj3.app.piccie.adapter.NewImagesAdapter
 
 import dev.rj3.app.piccie.api.UnsplashApi
@@ -30,11 +33,9 @@ class NewImagesFragment : Fragment() {
 
         val view = inflater.inflate(R.layout.new_images_fragment, container, false)
         recyclerview = view.findViewById(R.id.newImagesRecyclerview)
-        val layoutManager = LinearLayoutManager(activity)
+
         recyclerview.apply {
 
-
-            setLayoutManager(layoutManager)
             setHasFixedSize(true)
 
         }
@@ -47,12 +48,15 @@ class NewImagesFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
 
 
-
         val unsplash = UnsplashApi()
         CoroutineScope(IO).launch {
             val response = unsplash.getPhotos(1, PER_PAGE)
             withContext(Main) {
-                val adapter = NewImagesAdapter(response)
+                val adapter = GroupAdapter<GroupieViewHolder>().apply {
+                    //addAll(ImageItem(response))
+                }
+                //adapter.add(ImageItem(response))
+
                 recyclerview.adapter = adapter
 
             }
