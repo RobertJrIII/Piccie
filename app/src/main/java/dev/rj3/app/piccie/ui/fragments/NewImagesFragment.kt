@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import dev.rj3.app.piccie.R
 import dev.rj3.app.piccie.adapter.NewImagesAdapter
 
-import dev.rj3.app.piccie.data.api.UnsplashApi
+import dev.rj3.app.piccie.api.UnsplashApi
 import kotlinx.coroutines.*
 import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.Dispatchers.Main
@@ -45,6 +45,7 @@ class NewImagesFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+
 
 
         val unsplash = UnsplashApi()

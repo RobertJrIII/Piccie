@@ -6,12 +6,10 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import coil.ImageLoader
 import coil.api.load
-import coil.request.LoadRequest
 import dev.rj3.app.piccie.R
 import dev.rj3.app.piccie.adapter.NewImagesAdapter.ViewHolder
-import dev.rj3.app.piccie.models.newUnsplahImages.UnsplashImage
+import dev.rj3.app.piccie.models.UnsplashImage
 
 class NewImagesAdapter(private val imageList: List<UnsplashImage>) :
     RecyclerView.Adapter<ViewHolder>() {
@@ -34,7 +32,7 @@ class NewImagesAdapter(private val imageList: List<UnsplashImage>) :
     }
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val image: ImageView = view.findViewById(R.id.unsplashImage)
+        val image: ImageView = view.findViewById(R.id.unsplashImageView)
         val author: TextView = view.findViewById(R.id.imageAuthor)
 
     }

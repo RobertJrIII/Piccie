@@ -1,4 +1,4 @@
-package dev.rj3.app.piccie.models.newUnsplahImages
+package dev.rj3.app.piccie.models
 
 
 import com.squareup.moshi.Json
@@ -13,7 +13,6 @@ data class UnsplashImage(
     var likes: Int,
     val user: User
 )
-
 
 
 data class Urls(

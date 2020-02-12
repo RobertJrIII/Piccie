@@ -1,7 +1,7 @@
-package dev.rj3.app.piccie.data.api
+package dev.rj3.app.piccie.api
 
 import dev.rj3.app.piccie.BuildConfig
-import dev.rj3.app.piccie.models.newUnsplahImages.UnsplashImage
+import dev.rj3.app.piccie.models.UnsplashImage
 
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient.*
