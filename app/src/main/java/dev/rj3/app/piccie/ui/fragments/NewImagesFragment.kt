@@ -51,10 +51,12 @@ class NewImagesFragment : Fragment() {
         val unsplash = UnsplashApi()
         CoroutineScope(IO).launch {
             val response = unsplash.getPhotos(1, PER_PAGE)
+            val adapter = GroupAdapter<GroupieViewHolder>()
+            for (image in response){
+                adapter.add(ImageItem(image))
+            }
             withContext(Main) {
-                val adapter = GroupAdapter<GroupieViewHolder>().apply {
-                    //addAll(ImageItem(response))
-                }
+
                 //adapter.add(ImageItem(response))
 
                 recyclerview.adapter = adapter
