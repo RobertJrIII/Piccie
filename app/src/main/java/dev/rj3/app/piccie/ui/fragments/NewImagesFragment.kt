@@ -5,15 +5,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.xwray.groupie.GroupAdapter
-import com.xwray.groupie.kotlinandroidextensions.GroupieViewHolder
+import com.xwray.groupie.GroupieViewHolder
 
 
 import dev.rj3.app.piccie.R
 import dev.rj3.app.piccie.adapter.ImageItem
-import dev.rj3.app.piccie.adapter.NewImagesAdapter
 
 import dev.rj3.app.piccie.api.UnsplashApi
 import kotlinx.coroutines.*
@@ -25,6 +23,7 @@ const val PER_PAGE: Int = 25
 class NewImagesFragment : Fragment() {
 
     private lateinit var recyclerview: RecyclerView
+    private lateinit var adapter: GroupAdapter<GroupieViewHolder>
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -40,7 +39,7 @@ class NewImagesFragment : Fragment() {
 
         }
 
-
+        adapter = GroupAdapter<GroupieViewHolder>()
         return view
     }
 
@@ -49,17 +48,24 @@ class NewImagesFragment : Fragment() {
 
 
         val unsplash = UnsplashApi()
+
         CoroutineScope(IO).launch {
-            val response = unsplash.getPhotos(1, PER_PAGE)
-            val adapter = GroupAdapter<GroupieViewHolder>()
-            for (image in response){
-                adapter.add(ImageItem(image))
-            }
+
+
             withContext(Main) {
 
-                //adapter.add(ImageItem(response))
 
                 recyclerview.adapter = adapter
+
+            }
+
+
+            val response = unsplash.getPhotos(1, PER_PAGE)
+
+
+
+            for (image in response) {
+                adapter.add(ImageItem(image))
 
             }
 
