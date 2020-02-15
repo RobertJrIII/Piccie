@@ -18,8 +18,8 @@ android {
     }
     buildTypes {
         release {
-            minifyEnabled true
-            shrinkResources true
+            minifyEnabled false
+            shrinkResources false
             buildConfigField("String", "Client_ID", "\"420646dee0e95667d25f6e295a8030ccc21cccdb37e228f8cb0968d8bfad47ba\"")
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
