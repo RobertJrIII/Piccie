@@ -39,7 +39,7 @@ class NewImagesFragment : Fragment() {
 
         }
 
-        adapter = GroupAdapter<GroupieViewHolder>()
+        adapter = GroupAdapter()
         return view
     }
 
