@@ -1,4 +1,4 @@
-package dev.rj3.app.piccie
+package dev.rj3.app.ripple
 
 import org.junit.Test
 

@@ -1,11 +1,11 @@
-package dev.rj3.app.piccie.adapter
+package dev.rj3.app.ripple.adapter
 import coil.api.load
 import com.xwray.groupie.kotlinandroidextensions.GroupieViewHolder
 import com.xwray.groupie.kotlinandroidextensions.Item
 
 
-import dev.rj3.app.piccie.R
-import dev.rj3.app.piccie.models.UnsplashImage
+import dev.rj3.app.ripple.R
+import dev.rj3.app.ripple.models.UnsplashImage
 import kotlinx.android.synthetic.main.new_images_item.view.*
 
 class ImageItem(private val image: UnsplashImage) : Item() {

@@ -1,4 +1,4 @@
-package dev.rj3.app.piccie.ui.fragments
+package dev.rj3.app.ripple.ui.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,10 +10,10 @@ import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.kotlinandroidextensions.GroupieViewHolder
 
 
-import dev.rj3.app.piccie.R
-import dev.rj3.app.piccie.adapter.ImageItem
+import dev.rj3.app.ripple.R
+import dev.rj3.app.ripple.adapter.ImageItem
 
-import dev.rj3.app.piccie.api.UnsplashApi
+import dev.rj3.app.ripple.api.UnsplashApi
 import kotlinx.coroutines.*
 import kotlinx.coroutines.Dispatchers.IO
 
@@ -52,7 +52,11 @@ class NewImagesFragment : Fragment() {
             recyclerview.adapter = adapter
 
             val response = unsplash.getPhotos(1, PER_PAGE)
-            for (image in response) this@NewImagesFragment.adapter.add(ImageItem(image))
+            for (image in response) this@NewImagesFragment.adapter.add(
+                ImageItem(
+                    image
+                )
+            )
 
 
         }

@@ -1,4 +1,4 @@
-package dev.rj3.app.piccie
+package dev.rj3.app.ripple
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

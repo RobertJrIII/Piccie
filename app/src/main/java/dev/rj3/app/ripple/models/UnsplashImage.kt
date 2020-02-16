@@ -1,4 +1,4 @@
-package dev.rj3.app.piccie.models
+package dev.rj3.app.ripple.models
 
 
 import com.squareup.moshi.Json

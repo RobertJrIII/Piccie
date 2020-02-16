@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
 
     android:orientation="vertical"
-    tools:context=".ui.MainActivity">
+    tools:context="dev.rj3.app.ripple.ui.MainActivity">
 
     <include
         layout="@layout/toolbar" />

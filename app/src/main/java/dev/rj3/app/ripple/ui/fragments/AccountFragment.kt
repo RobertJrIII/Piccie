@@ -1,11 +1,11 @@
-package dev.rj3.app.piccie.ui.fragments
+package dev.rj3.app.ripple.ui.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import dev.rj3.app.piccie.R
+import dev.rj3.app.ripple.R
 
 class AccountFragment : Fragment() {
 
