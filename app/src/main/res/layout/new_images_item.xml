@@ -13,10 +13,10 @@
                 android:id="@+id/unsplashImageView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:scaleType="fitCenter"
+                android:scaleType="fitXY"
                 android:adjustViewBounds="true"
                 android:contentDescription="@string/unsplash_image"
-
+                android:transitionName="imageCover"
 
         />
 

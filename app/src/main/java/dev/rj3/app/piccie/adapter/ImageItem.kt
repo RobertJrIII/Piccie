@@ -1,5 +1,4 @@
 package dev.rj3.app.piccie.adapter
-
 import coil.api.load
 import com.xwray.groupie.kotlinandroidextensions.GroupieViewHolder
 import com.xwray.groupie.kotlinandroidextensions.Item
@@ -18,7 +17,7 @@ class ImageItem(private val image: UnsplashImage) : Item() {
 
 
         viewHolder.itemView.imageAuthor.text = image.user.name
-      viewHolder.itemView.unsplashImageView.load(image.urls.small)
+        viewHolder.itemView.unsplashImageView.load(image.urls.small)
     }
 
 }

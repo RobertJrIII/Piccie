@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.xwray.groupie.GroupAdapter
-import com.xwray.groupie.GroupieViewHolder
+import com.xwray.groupie.kotlinandroidextensions.GroupieViewHolder
 
 
 import dev.rj3.app.piccie.R
@@ -16,7 +16,6 @@ import dev.rj3.app.piccie.adapter.ImageItem
 import dev.rj3.app.piccie.api.UnsplashApi
 import kotlinx.coroutines.*
 import kotlinx.coroutines.Dispatchers.IO
-import kotlinx.coroutines.Dispatchers.Main
 
 const val PER_PAGE: Int = 25
 
@@ -38,8 +37,8 @@ class NewImagesFragment : Fragment() {
             setHasFixedSize(true)
 
         }
-
         adapter = GroupAdapter()
+
         return view
     }
 
@@ -50,28 +49,15 @@ class NewImagesFragment : Fragment() {
         val unsplash = UnsplashApi()
 
         CoroutineScope(IO).launch {
-
-
-            withContext(Main) {
-
-
-                recyclerview.adapter = adapter
-
-            }
-
+            recyclerview.adapter = adapter
 
             val response = unsplash.getPhotos(1, PER_PAGE)
-
-
-
-            for (image in response) {
-                adapter.add(ImageItem(image))
-
-            }
+            for (image in response) this@NewImagesFragment.adapter.add(ImageItem(image))
 
 
         }
 
 
     }
+
 }
