@@ -5,6 +5,11 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 
+def secretPropertiesFile = rootProject.file("keys.properties");
+def secretProperties = new Properties()
+secretProperties.load(new FileInputStream(secretPropertiesFile))
+
+
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
@@ -21,7 +26,7 @@ android {
 
             minifyEnabled false
             shrinkResources false
-            buildConfigField("String", "Client_ID", "\"420646dee0e95667d25f6e295a8030ccc21cccdb37e228f8cb0968d8bfad47ba\"")
+            buildConfigField("String", "Client_ID", secretProperties['apikey'])
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
 
@@ -30,7 +35,7 @@ android {
 
             minifyEnabled false
             shrinkResources false
-            buildConfigField("String", "Client_ID", "\"420646dee0e95667d25f6e295a8030ccc21cccdb37e228f8cb0968d8bfad47ba\"")
+            buildConfigField("String", "Client_ID", secretProperties['apikey'])
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
 
 
