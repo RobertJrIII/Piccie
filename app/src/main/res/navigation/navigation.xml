@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/navigation"
-    app:startDestination="@id/newImagesFragment">
+            xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/navigation"
+            app:startDestination="@id/newImagesFragment">
 
     <fragment
-        android:id="@+id/newImagesFragment"
-        android:name="dev.rj3.app.piccie.ui.fragments.NewImagesFragment"
-        android:label="NewImagesFragment" />
+            android:id="@+id/newImagesFragment"
+            android:name="dev.rj3.app.piccie.ui.fragments.NewImagesFragment"
+            android:label="NewImagesFragment"/>
     <fragment
-        android:id="@+id/collectionsFragment"
-        android:name="dev.rj3.app.piccie.ui.fragments.CollectionsFragment"
-        android:label="CollectionsFragment" />
+            android:id="@+id/collectionsFragment"
+            android:name="dev.rj3.app.piccie.ui.fragments.CollectionsFragment"
+            android:label="CollectionsFragment"/>
     <fragment
-        android:id="@+id/settingsFragment"
-        android:name="dev.rj3.app.piccie.ui.fragments.SettingsFragment"
-        android:label="SettingsFragment" />
+            android:id="@+id/settingsFragment"
+            android:name="dev.rj3.app.piccie.ui.fragments.SettingsFragment"
+            android:label="SettingsFragment"/>
+    <fragment android:id="@+id/accountFragment"
+              android:name="dev.rj3.app.piccie.ui.fragments.AccountFragment"
+              android:label="AccountFragment"/>
 </navigation>

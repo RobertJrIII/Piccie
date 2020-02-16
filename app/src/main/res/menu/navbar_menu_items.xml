@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@id/newImagesFragment"
-        android:icon="@drawable/ic_image_black_24dp"
-        android:title="@string/New" />
-
-
-
+            android:id="@id/newImagesFragment"
+            android:icon="@drawable/ic_image_black_24dp"
+            android:title="@string/New"/>
 
 
     <item
-        android:id="@id/collectionsFragment"
-        android:icon="@drawable/ic_collections_black_24dp"
-        android:title="@string/Collections" />
-
+            android:id="@id/collectionsFragment"
+            android:icon="@drawable/ic_collections_black_24dp"
+            android:title="@string/Collections"/>
 
     <item
-        android:id="@id/settingsFragment"
-        android:icon="@drawable/ic_settings_black_24dp"
-        android:title="@string/Settings" />
+            android:id="@id/accountFragment"
+            android:icon="@drawable/ic_account_circle_black_24dp"
+            android:title="@string/Account"
+    />
+    <item
+            android:id="@id/settingsFragment"
+            android:icon="@drawable/ic_settings_black_24dp"
+            android:title="@string/Settings"/>
 
 </menu>
