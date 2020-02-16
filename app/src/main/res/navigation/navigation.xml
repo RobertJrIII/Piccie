@@ -5,17 +5,17 @@
 
     <fragment
             android:id="@+id/newImagesFragment"
-            android:name="dev.rj3.app.ripple.ui.fragments.NewImagesFragment"
+            android:name="dev.rj3.app.piccie.ui.fragments.NewImagesFragment"
             android:label="NewImagesFragment"/>
     <fragment
             android:id="@+id/collectionsFragment"
-            android:name="dev.rj3.app.ripple.ui.fragments.CollectionsFragment"
+            android:name="dev.rj3.app.piccie.ui.fragments.CollectionsFragment"
             android:label="CollectionsFragment"/>
     <fragment
             android:id="@+id/settingsFragment"
-            android:name="dev.rj3.app.ripple.ui.fragments.SettingsFragment"
+            android:name="dev.rj3.app.piccie.ui.fragments.SettingsFragment"
             android:label="SettingsFragment"/>
     <fragment android:id="@+id/accountFragment"
-              android:name="dev.rj3.app.ripple.ui.fragments.AccountFragment"
+              android:name="dev.rj3.app.piccie.ui.fragments.AccountFragment"
               android:label="AccountFragment"/>
 </navigation>

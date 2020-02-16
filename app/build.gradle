@@ -5,7 +5,7 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 
-def secretPropertiesFile = rootProject.file("secrets.properties");
+def secretPropertiesFile = rootProject.file("keys.properties");
 def secretProperties = new Properties()
 secretProperties.load(new FileInputStream(secretPropertiesFile))
 
@@ -14,7 +14,7 @@ android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
     defaultConfig {
-        applicationId "com.the3rdwheel.app.ripple"
+        applicationId "com.the3rdwheel.app.piccie"
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
