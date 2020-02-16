@@ -5,7 +5,7 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 
-def secretPropertiesFile = rootProject.file("keys.properties");
+def secretPropertiesFile = rootProject.file("secrets.properties");
 def secretProperties = new Properties()
 secretProperties.load(new FileInputStream(secretPropertiesFile))
 
